@@ -1,0 +1,10 @@
+flask-bootstrap
+flask>=2.1.2
+flask-appconfig
+flask-bootstrap
+flask-nav
+flask-debug
+flask-wtf
+wtforms
+wtforms-validators
+google-cloud-storage
