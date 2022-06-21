@@ -1,40 +1,49 @@
 {% extends "bootstrap/base.html" %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as utils %}
 
-  {% block title %}
-      Samsul Ma'arif
-  {% endblock %}
+{% block title %}
+    {{ name }}
+{% endblock %}
 
+{% block head %}
+{{super()}}
+{{fixes.ie8()}}
+{%- endblock %}
 
 {% block content %}
 
 <div class="container">
-  <h1>Halo, aku Samsul Ma'arif!</h1>
-
-
-        <div class="jumbotron">
-          <h1>Super awesome marketing speak!</h1>
-          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <a class="btn btn-large btn-success" href="#">Sign up today</a>
-        </div>
-
-  <!-- Example row of columns -->
-  <div class="row">
-    <div class="span4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn" href="#">View details &raquo;</a></p>
+    <div class="jumbotron text-center">
+      <img width="300px" src="https://storage.googleapis.com/samsul-submission1-dicoding/samsul-penteng-kelek.jpg" class="img-circle">
+      <h1>Halo, aku {{ name }}!</h1>
+      <p class="lead">Seorang Blogger, DevOps Engineer, SysAdmin, Pendengar yang baik.</p>
+      <a class="btn btn-large btn-success" href="https://blog.samsul.web.id">Personal Blog</a>
     </div>
-    <div class="span4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn" href="#">View details &raquo;</a></p>
-   </div>
-    <div class="span4">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn" href="#">View details &raquo;</a></p>
+
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Experience</h2>
+        <hr>
+            <p>Halo, aku mulai menyukai dunia IT sejak MTs (setingkat SMP). Saat ini aku bekerja sebagai DevOps Officer di <a href="https://www.dot.co.id">DOT Indonesia</a> sejak Januari 2018. Selain itu, sejak 2019 aku bersama teman-teman juga sedang merintis <a href="https://nacita.id">Nacita.ID</a>, membuka jasa SysAdmin & DevOps bagi startup maupun instansi yang membutuhkan. Di Nacita.id juga melayani permintaan training Linux System Administrator maupun DevOps baik untuk instansi maupun personal.</p>
+            <p><a class="btn btn-medium btn-success" href="https://nacita.id/training/">Selengkapnya &raquo;</a></p>
+      </div>
+
+      <div class="col-md-4">
+        <h2>Personal Data</h2>
+        <hr>
+        <dl class="dl-horizontal">
+          <dt>Nama</dt>
+          <dd>{{ name }}</dd>
+          <dt>Alamat</dt>
+          <dd>{{ alamat }}</dd>
+          <dt>Facebook</dt>
+          <dd><a href="{{ facebook_url }}">fb.com/samsul.web.id</a></dd>
+          <dt>Instagram</dt>
+          <dd><a href="https://instagram.com/samsul.web.id">instagram.com/samsul.web.id</a></dd>
+        </dl>
+      </div>
     </div>
-  </div>
 
   <hr>
 

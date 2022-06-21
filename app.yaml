@@ -1,0 +1,12 @@
+runtime: python39
+
+env_variables:
+  USER_NAME: "Samsul Ma'arif"
+  FACEBOOK_URL: "https://fb.com/samsul.web.id"
+  ALAMAT: "Kota Malang"
+
+
+
+handlers:
+  - url: /.*
+    script: auto
